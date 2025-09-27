@@ -1,0 +1,249 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+p{
+    padding: 0;
+    margin: 0;
+}
+  .topMenu {
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2em;
+
+    margin: 5em auto;
+    grid-template-columns: 1fr 1fr;
+    .rightSide {
+      > p:first-child {
+        color: #2086c8;
+      }
+
+      > p:nth-child(2) {
+        color: #363636;
+        font-size: 2.4em;
+        font-weight: 700;
+      }
+
+      .messageContainer {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+        .item {
+          width: 80%;
+          line-height: 1.7;
+          background-color: #2086c8;
+          color: #fff;
+          padding: 0.8em 0.5em;
+          border-radius: 10px;
+          &.noBlueBack {
+            background-color: unset;
+            color: black;
+          }
+          &.ltr {
+            direction: ltr;
+            width: 80%;
+            background-color: #fff;
+            
+            > p {
+              width: fit-content;
+              text-align: center;
+              background-color: #2086c8;
+              color: #fff;
+              padding: 0.8em 0.5em;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+
+      .inputContainer {
+        > input {
+        }
+        > img {
+        }
+      }
+    }
+
+    .imgContainer {
+      position: relative;
+      height: 300px;
+      margin-top: 3em;
+      > img {
+        position: absolute;
+        width: 180px;
+        border-radius: 10px;
+      }
+      > img:nth-child(1) {
+        left: 0;
+        top: -2em;
+      }
+      > img:nth-child(2) {
+        left: 6em;
+        bottom: 3em;
+      }
+
+      > img:nth-child(3) {
+        left: 13.5em;
+        top: -3em;
+      }
+
+      > img:nth-child(4) {
+        left: 22em;
+        top: 0.5em;
+      }
+    }
+  }
+
+  .courseDetailsContainer {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--textColorStrong);
+    padding-bottom: 10em;
+
+    .courseDetailsMainContext {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 1em;
+      margin-top: 6em;
+
+      @media (max-width: 630px) {
+        grid-template-columns: 1fr;
+      }
+      aside {
+        @media (max-width: 630px) {
+          display: none;
+        }
+        background-color: #e6f6fd;
+        border-radius: 1em;
+      }
+
+      .mainContent {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2%;
+
+        @media (max-width: 1440px) {
+          grid-template-columns: 1fr 1fr;
+        }
+        @media (max-width: 900px) {
+          grid-template-columns: 1fr;
+        }
+        .cart {
+          width: 315px;
+          height: 388px;
+          padding: 1.2em;
+          box-shadow: 0 0 11px -5px;
+          display: flex;
+          flex-direction: column;
+          border-radius: 1.2em;
+          border: 1px solid #cdcdcd;
+
+          @media (max-width: 1440px) {
+            margin: auto;
+          }
+          @media (max-width: 1060px) {
+            height: fit-content;
+            padding: 0.5em;
+            width: 290px;
+          }
+          &:hover {
+            box-shadow: 0 0 11px -3px rgb(66, 255, 66);
+            transition: all 0.2s;
+          }
+
+          .topSideInCard {
+            > img {
+              width: 100%;
+            }
+          }
+
+          .title {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: #363636;
+            line-height: 1.5;
+          }
+
+          .downSideInCart {
+            display: grid;
+            gap: 4%;
+            margin-top: 3em;
+
+            @media (max-width: 1060px) {
+              margin: 1em;
+            }
+            .date {
+              color: #363636;
+              font-size: 1.2em;
+              font-weight: 400;
+            }
+
+            .features {
+              color: #363636;
+              display: grid;
+              grid-template-columns: 1fr 180px;
+
+              .inperonOrNot {
+              }
+
+              .teacherName {
+              }
+
+              .timeForClass {
+                margin-top: 0.5em;
+              }
+            }
+
+            .btnAndPriceInCart {
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              position: relative;
+              height: 3.5em;
+              @media (max-width: 1060px) {
+                margin-bottom: 0.5em;
+                height: 1.5em;
+              }
+              .price {
+                position: absolute;
+                z-index: 0;
+                right: 0;
+              }
+
+              .showClassBtn {
+                position: absolute;
+                z-index: 1;
+                width: 33.6%;
+                text-align: center;
+                background-color: #2086c8;
+                box-shadow: 0 0 10px -1px #2086c8;
+                padding: 0.5em 1em;
+                color: #fff;
+                text-decoration-line: none;
+                font-weight: 700;
+                border-radius: 0.5em;
+                left: 0;
+                transition: all 0.2s;
+
+                &:hover {
+                  width: 90%;
+                  box-shadow: 0 0 10px -1px #12b76a;
+                  background-color: #12b76a;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
