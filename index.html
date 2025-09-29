@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <div class="overlay"></div>
     <div class="topMenu">
       <div class="rightSide">
         <p>آموزشگاه برناه نویسی تحلیل داده</p>
@@ -66,7 +67,7 @@
               <img src="./public/icons/icons8_slider 1.png" alt="عکس فیلتر" />
               <p>فیلتر ها</p>
             </div>
-            <p>حذف همه</p>
+            <p class="delet">حذف همه</p>
           </div>
 
           <div class="searchBarContainer">
@@ -80,7 +81,7 @@
               <i class="fa-solid fa-angle-down"></i>
             </div>
 
-            <div class="content">
+            <div class="content inputsContainer">
               <label for="check1">
                 <input type="checkbox" name="check1" id="check1" />
                 کودکان و نوجوانان
@@ -660,19 +661,63 @@
       btnForClick.addEventListener("click", () => {
         btnForClick.classList.toggle("active");
       });
-      
 
+      const filterLeft = document.querySelector(".filterLeft");
+      const asideMobile = document.querySelector(".aside");
+      const overlay = document.querySelector(".overlay");
 
-      const filterLeft = document.querySelector(".filterLeft")
-      let asideMobile =  document.querySelector(".aside")
-      filterLeft.addEventListener("click" , ()=>{
-        asideMobile.classList.toggle("mobileActive");
-      })
+      filterLeft.addEventListener("click", () => {
+        if (!asideMobile.classList.contains("mobileActive")) {
+          // باز کردن منو
+          asideMobile.classList.remove("slideDown");
+          void asideMobile.offsetWidth; // ریست انیمیشن
+          asideMobile.classList.add("mobileActive", "slideUp");
 
+          overlay.style.display = "block"; // overlay وقتی منو باز شد نمایش داده می‌شود
+        } else {
+          // بستن منو
+          asideMobile.classList.remove("slideUp");
+          void asideMobile.offsetWidth; // ریست انیمیشن
+          asideMobile.classList.add("slideDown");
 
+          asideMobile.addEventListener("animationend", function handler() {
+            asideMobile.classList.remove("mobileActive", "slideDown");
+            asideMobile.removeEventListener("animationend", handler);
+          });
+        }
 
+        overlay.addEventListener("click", () => {
+          overlay.style.display = "none"; // overlay وقتی منو کامل بسته شد پنهان شود
+          asideMobile.classList.remove("mobileActive");
+        });
+      });
 
-      
+      const optionBtns = document.querySelectorAll(".option");
+
+      optionBtns.forEach((option) => {
+        option.addEventListener("click", () => {
+          // اول همه رو غیر فعال می‌کنیم
+          optionBtns.forEach((btn) => btn.classList.remove("active"));
+          // بعد فقط روی همین کلیک‌شده فعال می‌کنیم
+          option.classList.add("active");
+        });
+      });
+
+      const removeAllCheckedItems = document.querySelector(".delet");
+      const inputsContainer = document.querySelector(".inputsContainer");
+
+      removeAllCheckedItems.addEventListener("click", () => {
+        // گرفتن همه inputهای نوع checkbox داخل inputsContainer
+        const checkboxes = inputsContainer.querySelectorAll(
+          'input[type="checkbox"]'
+        );
+
+        checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+            checkbox.checked = false; // برداشتن تیک
+          }
+        });
+      });
     </script>
     <script
       src="https://kit.fontawesome.com/c7278e0f8b.js"
