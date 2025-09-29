@@ -15,39 +15,138 @@
         <p>دوره های آموزش برنامه نویسی</p>
 
         <div class="messageContainer">
-          <div class="item backBlue">
-            <p>
-              به عنوان با سابقه ترین آموزشگاه برنامه نویسی در تهران سعی کردیم
-              کاربردی ترین دوره هارو به صورت کاملا پروژه محور در اختیارتون قرار
-              بدیم و تا لحظه استخدام کنارتون باشیم!
-            </p>
+          <div class="itemContainer ltr">
+            <div class="item introP">
+              <p>
+                به عنوان با سابقه ترین آموزشگاه برنامه نویسی در تهران سعی کردیم
+                کاربردی ترین دوره هارو به صورت کاملا پروژه محور در اختیارتون
+                قرار بدیم و تا لحظه استخدام کنارتون باشیم!
+              </p>
+            </div>
           </div>
-          <div class="item noBlueBack ">
-            <p>مزایای دوره هاتون چیه ؟</p>
+          <div class="itemContainer">
+            <div class="item noBackBlue rightItemP">
+              <p>مزایای دوره هاتون چیه ؟</p>
+            </div>
           </div>
-          <div class="item ltr">
-            <p>برگزاری حضوری و آنلاین</p>
+
+          <div class="itemContainer ltr">
+            <div class="item left">
+              <p>برگزاری حضوری و آنلاین</p>
+            </div>
           </div>
         </div>
         <div class="inputContainer">
-          <input type="text" placeholder="چه دوره ای برای من مناسبه؟" />
           <img src="./public/icons/fluent_send-16-filled.png" alt="ایکون" />
-        </div>
-      </div>
- 
-        <div class="imgContainer">
-          <img src="/public/menuImg/img1.png" alt=" عکس منو " />
-          <img src="/public/menuImg/img2.png" alt="عکس منو " />
-          <img src="/public/menuImg/img3.png" alt="عکس منو " />
-          <img src="/public/menuImg/img4.png" alt="عکس منو " />
+          <input type="text" placeholder="چه دوره ای برای من مناسبه؟" />
         </div>
 
+        <div class="filterAndSearchBarInMobile">
+          <input type="text" placeholder="جستجو دوره ها" />
+          <div class="filterLeft">
+            <img src="./public/icons/icons8_slider 1.png" alt="عکس فیلتر" />
+            <p>فیلتر ها</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imgContainer">
+        <img src="/public/menuImg/img1.png" alt=" عکس منو " />
+        <img src="/public/menuImg/img2.png" alt="عکس منو " />
+        <img src="/public/menuImg/img3.png" alt="عکس منو " />
+        <img src="/public/menuImg/img4.png" alt="عکس منو " />
+      </div>
     </div>
 
     <div class="courseDetailsContainer">
       <div class="courseDetailsMainContext">
-        <aside>
-          <p>فیلتر</p>
+        <aside class="aside">
+          <div class="topAside">
+            <div>
+              <img src="./public/icons/icons8_slider 1.png" alt="عکس فیلتر" />
+              <p>فیلتر ها</p>
+            </div>
+            <p>حذف همه</p>
+          </div>
+
+          <div class="searchBarContainer">
+            <input type="text" placeholder=" جست و جوی دوره ها" />
+            <img src="/public/icons/searchIcon.png" alt="ایکون" />
+          </div>
+
+          <div class="BackForWite">
+            <div class="inputContainerForFilter newHeadLine">
+              <p class="">دسته بندی ها</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div class="content">
+              <label for="check1">
+                <input type="checkbox" name="check1" id="check1" />
+                کودکان و نوجوانان
+              </label>
+
+              <label for="check2">
+                <input type="checkbox" name="check2" id="check2" />
+                مقدمات برنامه نویسی
+              </label>
+
+              <label for="check3">
+                <input type="checkbox" name="check3" id="check3" />
+                مهارت های عمومی
+              </label>
+
+              <label for="check4">
+                <input type="checkbox" name="check4" id="check4" />
+                پایتون و هوش مصنوعی
+              </label>
+
+              <label for="check5">
+                <input type="checkbox" name="check5" id="check5" />
+                برنامه نویسی سی شارپ
+              </label>
+
+              <label for="check6">
+                <input type="checkbox" name="check6" id="check6" />
+                طراحی سایت
+              </label>
+
+              <label for="check7">
+                <input type="checkbox" name="check7" id="check7" />
+                پایگاه داده
+              </label>
+
+              <label for="check8">
+                <input type="checkbox" name="check8" id="check8" />
+                معماری نرم افزار
+              </label>
+
+              <label for="check9">
+                <input type="checkbox" name="check9" id="check9" />
+                UIUX
+              </label>
+            </div>
+          </div>
+
+          <div class="activeCourses">
+            <p class="">دوره های درحال برگزاری</p>
+            <button id="btnForClick">
+              <div class="circle"></div>
+            </button>
+          </div>
+
+          <div class="BackForWite">
+            <div class="inputContainerForFilter newHeadLine">
+              <p class="">نحوه برگزاری</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div class="content notAcolumn">
+              <button class="option">حضوری و آنلاین</button>
+              <button class="option">حضوری</button>
+              <button class="option">آنلاین</button>
+            </div>
+          </div>
         </aside>
 
         <div class="mainContent">
@@ -91,6 +190,46 @@
               </div>
             </div>
           </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
 
           <div class="cart">
             <div class="topSideInCard">
@@ -133,6 +272,327 @@
             </div>
           </div>
 
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <div class="topSideInCard">
+              <img
+                src="./public/icons/reactourse@2x2025-08-04-10-44-31 1.webp"
+                alt="عکس دوره"
+              />
+            </div>
+
+            <span class="title"> دوره آموزش پایتون از مقدماتی تا پیشرفته </span>
+            <div class="downSideInCart">
+              <span class="date"> جمعه ها • 13 - 17 </span>
+              <div class="features">
+                <span class="inperonOrNot">
+                  حضوری و آنلاین
+                  <img
+                    src="./public/icons/icons8_schoolboy_at_a_desk 1.png"
+                    alt=""
+                  />
+                </span>
+                <span class="teacherName">
+                  مهندس مصطفایی
+                  <img src="./public/icons/icons8_classroom 1.png" alt="" />
+                </span>
+                <span class="timeForClass">
+                  68 ساعت
+                  <img src="./public/icons/icons8_wall_clock 1.png" alt="" />
+                </span>
+              </div>
+              <div class="btnAndPriceInCart">
+                <span class="price">
+                  8.000.000 تومان
+                  <img
+                    src="./public/icons/icons8_Average_Price 1.png"
+                    alt="ایکون"
+                  />
+                </span>
+                <a class="showClassBtn" href=""> مشاهده دوره </a>
+              </div>
+            </div>
+          </div>
           <div class="cart">
             <div class="topSideInCard">
               <img
@@ -176,5 +636,47 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var buttons = document.querySelectorAll(".newHeadLine");
+      var contents = document.querySelectorAll(".content");
+      var icons = document.querySelectorAll(".fa-angle-down");
+      buttons.forEach(function (button, index) {
+        button.addEventListener("click", function () {
+          var content = contents[index];
+          var icon = icons[index];
+          if (content.classList.contains("giveContent")) {
+            content.classList.remove("giveContent");
+            icon.classList.remove("active");
+          } else {
+            content.classList.add("giveContent");
+            icon.classList.add("active");
+          }
+        });
+      });
+      const btnForClick = document.getElementById("btnForClick");
+      const circle = btnForClick.firstElementChild;
+
+      btnForClick.addEventListener("click", () => {
+        btnForClick.classList.toggle("active");
+      });
+      
+
+
+      const filterLeft = document.querySelector(".filterLeft")
+      let asideMobile =  document.querySelector(".aside")
+      filterLeft.addEventListener("click" , ()=>{
+        asideMobile.classList.toggle("mobileActive");
+      })
+
+
+
+
+      
+    </script>
+    <script
+      src="https://kit.fontawesome.com/c7278e0f8b.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
